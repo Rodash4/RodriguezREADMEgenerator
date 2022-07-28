@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -51,61 +52,41 @@ const promptUser = () => {
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
-cont generateREADME = ({answers}) =>
 
- "# ${projectTitle}
-
- ## Table of Content 
- - [License](#License)
- - [Project description](#Description)
- - [Installation](Installation)
- - [Usage](#Usage)
- - [Contribution](#Contribution)
- - [Questions](#Questions)
-
- ## License
-
- This project is licensed under the terms of the ${license}
-
- ## Description
- 
- ${description}
- 
- ## Installation
- 
- ${installation}
- 
- ## Usage
- 
- ${usage}
-
- To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
- 
-     ```md
-     ![alt text](assets/images/screenshot.png)
-     ```
- 
- ## Contribution
-
- ${contribution}
-
- ## Quesions
-
- GitHub Link ${link}
- For any additional questions please contact me at ${questions}";
-
-
-
-// TODO: Create a function to initialize app
-// function init() {}
 const init = () => {
     promptUser()
       // Use writeFileSync method to use promises instead of a callback function
-      .then((answers) => fs.writeFileSync('README.md', generateREADME(answers)))
-      .then(() => console.log('Successfully created README.md'))
+      .then((answers) => fs.writeFileSync('./created/README.md', generateMarkdone(generateREADME(data))))
+      .then(() => console.log('Successfully created README'))
       .catch((err) => console.error(err));
   };
   
+
+
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, err => {
+//         if (err) {
+//             return console.log(err);
+//         }
+//         console.log('Your README has been created')
+//     });
+// };
+
+
+
+// // TODO: Create a function to initialize app                                                   
+
+
+// // function init() {}
+
+// function init() {
+//     inquirer.prompt(data)
+//     .then(data => {
+//         const readmeData = generateMarkdown(data);
+//         writeToFile('./created/README.md', readmeData);
+//     });
+// };
+
 
 // Function call to initialize app
 init();

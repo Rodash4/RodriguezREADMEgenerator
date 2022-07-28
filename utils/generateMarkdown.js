@@ -1,27 +1,81 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+const licenseBadge = licenseList => {
+  const renderLicenseBadge = licenseLists.map((license) {
+    if (license === "ISC") {
+      return `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)(https://opensource.org/licenses/ISC)`;
+    } else if (license === 'MIT') {
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+    } else if (license === 'Mozilla') {
+      return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+    } else if (license === 'Eclipse') {
+      return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+    } else {
+      return `No License Listed`;
+    }
+  });
+  
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  return `using the ${license}`
-}
+  return renderLicenseBadge.join(' ');
+};
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+const generateREADME = data => {
+  
+  const {
+    projectTitle,
+    license,
+    description,
+    installation, 
+    usage,
+    contribution,
+    link,
+    questions} = data
+  
 
-${data.description}, 
-${renderLicenseBadge(data.license)} 
-${renderLicenseSection(data.license)} 
-${data.contributing} 
-${data.tests} `
-`;
+  return 
+  "${projectTitle}
+
+   ## Table of Content 
+  - [License](#License)
+  - [Project description](#Description)
+  - [Installation](Installation)
+  - [Usage](#Usage)
+  - [Contribution](#Contribution)
+  - [Questions](#Questions)
+ 
+   ## License
+ 
+   This project is licensed under the terms of the ${licenseBadge(license)}
+ 
+   ## Description
+  
+   ${description}
+  
+   ## Installation
+  
+   ${installation}
+  
+   ## Usage
+  
+   ${usage}
+ 
+   To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+  
+      ```md
+      ![alt text](assets/images/screenshot.png)
+      ```
+  
+   ## Contribution
+ 
+   ${contribution}
+ 
+   ## Quesions
+ 
+   GitHub Link ${link}
+   For any additional questions please contact me at ${questions}";
+
 }
+
 
 module.exports = generateMarkdown;
