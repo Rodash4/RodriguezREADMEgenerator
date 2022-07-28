@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const licenseBadge = licenseList => {
-  const renderLicenseBadge = licenseLists.map((license) {
+  const renderLicenseBadge = licenseLists.map((license) => { 
     if (license === "ISC") {
       return `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)(https://opensource.org/licenses/ISC)`;
     } else if (license === 'MIT') {
@@ -34,15 +34,15 @@ const generateREADME = data => {
   
 
   return 
-  "${projectTitle}
+  '${projectTitle}
 
    ## Table of Content 
-  - [License](#License)
-  - [Project description](#Description)
-  - [Installation](Installation)
-  - [Usage](#Usage)
-  - [Contribution](#Contribution)
-  - [Questions](#Questions)
+    [License](#License)
+    [Project description](#Description)
+    [Installation](Installation)
+    [Usage](#Usage)
+    [Contribution](#Contribution)
+    [Questions](#Questions)
  
    ## License
  
@@ -60,11 +60,7 @@ const generateREADME = data => {
   
    ${usage}
  
-   To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-  
-      ```md
-      ![alt text](assets/images/screenshot.png)
-      ```
+   Add a screenshot
   
    ## Contribution
  
@@ -73,7 +69,7 @@ const generateREADME = data => {
    ## Quesions
  
    GitHub Link ${link}
-   For any additional questions please contact me at ${questions}";
+   For any additional questions please contact me at ${questions}';
 
 }
 
