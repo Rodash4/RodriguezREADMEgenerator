@@ -12,9 +12,9 @@ const promptUser = () => {
             message: "What is the project name?",
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: "license",
-            choices: ["ISC", "MIT", "Mozilla", "Eclipse"],
+            choices: ['ISC', 'MIT', 'Mozilla', 'Eclipse'],
         },
         {
             type: 'input',

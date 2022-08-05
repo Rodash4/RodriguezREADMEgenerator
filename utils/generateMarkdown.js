@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const licenseBadge = licenseList => {
-  const renderLicenseBadge = licenseLists.map((license) => { 
+  const renderLicenseBadge = licenseList.map((license) => { 
     if (license === "ISC") {
       return `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)(https://opensource.org/licenses/ISC)`;
     } else if (license === 'MIT') {
@@ -33,8 +33,7 @@ const generateMarkdown = data => {
     questions} = data
   
 
-  return 
-  `${projectTitle}
+  return `${projectTitle}
 
    ## Table of Content 
     [License](#License)
