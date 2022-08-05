@@ -20,7 +20,7 @@ const licenseBadge = licenseList => {
 };
 
 // TODO: Create a function to generate markdown for README
-const generateREADME = data => {
+const generateMarkdown = data => {
   
   const {
     projectTitle,
@@ -34,7 +34,7 @@ const generateREADME = data => {
   
 
   return 
-  '${projectTitle}
+  `${projectTitle}
 
    ## Table of Content 
     [License](#License)
@@ -69,7 +69,7 @@ const generateREADME = data => {
    ## Quesions
  
    GitHub Link ${link}
-   For any additional questions please contact me at ${questions}';
+   For any additional questions please contact me at ${questions}`;
 
 }
 
