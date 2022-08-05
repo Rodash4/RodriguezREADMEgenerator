@@ -8,7 +8,7 @@ https://github.com/Rodash4/RodriguezREADMEgenerator
 
 ![README in Terminal](/assets/images/README Example.PNG)
 
-![README Created](\assets\images\README Example.PNG)
+![README Created](assets/images/README Example.PNG)
 
 # Video
 
