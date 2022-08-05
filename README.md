@@ -6,7 +6,7 @@ https://github.com/Rodash4/RodriguezREADMEgenerator
 
 # The following image shows the web application's appearance and functionality:
 
-![README in Terminal](assets\images\README Terminal.PNG)
+![README in Terminal](assets/images/README Example.PNG)
 
 ![README Created](assets\images\README Example.PNG)
 
