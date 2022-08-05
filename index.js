@@ -57,13 +57,12 @@ const writeFile = fileContent => {
                 console.log(err);
                 return;
             }
-            resolve({
-                ok: true,
-                message: 'Your README has been created!'
+            if(resolve) {
+                console.log('Your README has been created!')}
             });
         });
-    });
-};
+    };
+
 
 // // TODO: Create a function to initialize app      
 
