@@ -7,9 +7,9 @@ https://github.com/Rodash4/RodriguezREADMEgenerator
 # The following image shows the web application's appearance and functionality:
 
 
-![created](assets\images\READMEExample.PNG)
+![created](assets\images\Example.PNG)
 
-![Terminal](assets\images\READMETerminal.PNG)
+![Terminal](assets\images\Terminal.PNG)
 
 
 # Video
